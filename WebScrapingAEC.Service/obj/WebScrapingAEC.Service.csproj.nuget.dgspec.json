@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj": {}
+  },
+  "projects": {
+    "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj",
+        "projectName": "WebScrapingAEC.Domain",
+        "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj",
+        "packagesPath": "/home/guilherme/.nuget/packages/",
+        "outputPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/guilherme/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj",
+        "projectName": "WebScrapingAEC.Service",
+        "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj",
+        "packagesPath": "/home/guilherme/.nuget/packages/",
+        "outputPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/guilherme/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Selenium.Firefox.WebDriver": {
+              "target": "Package",
+              "version": "[0.27.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

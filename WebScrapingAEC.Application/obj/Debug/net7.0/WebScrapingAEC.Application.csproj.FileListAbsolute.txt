@@ -31,3 +31,12 @@
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/obj/Debug/net7.0/WebScrapingAEC.Application.pdb
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/obj/Debug/net7.0/WebScrapingAEC.Application.genruntimeconfig.cache
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/obj/Debug/net7.0/ref/WebScrapingAEC.Application.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Domain.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Domain.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Service.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Service.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebDriver.dll

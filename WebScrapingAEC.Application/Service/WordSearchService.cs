@@ -1,14 +1,23 @@
 using System.Runtime.CompilerServices;
 using WebScrapingAEC.Application.ViewModels;
+using WebScrapingAEC.Domain.Entities.Scraping;
+using WebScrapingAEC.Domain.Interfaces.Scraping;
 
-namespace WebScrapingAEC.Application.Service;
-
-public class WordSearchService
+namespace WebScrapingAEC.Application.Service
 {
-    public WordSearchService(){}
-    
-    public static Boolean Search(SearchRequest words)
+    public class WordSearchService : IWordSearchService
     {
-        return true;
+        private readonly IScrapingService _scrapingService;
+
+        public WordSearchService(IScrapingService scrapingService)
+        {
+            _scrapingService = scrapingService;
+        }
+
+        public bool Search(WordSearchList words)
+        {
+            var teste = _scrapingService.Get(words);
+            return teste;
+        }
     }
 }

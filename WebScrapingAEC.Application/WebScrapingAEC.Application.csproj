@@ -45,4 +45,9 @@
     <Content Remove="Interface\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebScrapingAEC.Domain\WebScrapingAEC.Domain.csproj" />
+    <ProjectReference Include="..\WebScrapingAEC.Service\WebScrapingAEC.Service.csproj" />
+  </ItemGroup>
+
 </Project>

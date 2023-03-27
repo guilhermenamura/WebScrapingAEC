@@ -1,4 +1,21 @@
+using WebScrapingAEC.Application.Service;
+using WebScrapingAEC.Domain.Interfaces.Scraping;
+using WebScrapingAEC.Service.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Registra a implementação de IScrapingService
+builder.Services.AddTransient<IScrapingService, ScrapingService>();
+
+// Configura a injeção de dependência do objeto "_scrapingService" na classe "WordSearchService"
+builder.Services.AddTransient<IWordSearchService, WordSearchService>();
+
+// Configura a injeção de dependência do objeto "_scrapingService" na classe "WordSearchService"
+builder.Services.AddTransient<WordSearchService>(provider =>
+{
+    var scrapingService = provider.GetRequiredService<IScrapingService>();
+    return new WordSearchService(scrapingService);
+});
 
 // Add services to the container.
 
