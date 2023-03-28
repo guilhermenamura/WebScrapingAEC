@@ -14,7 +14,7 @@ public class ConfigureRepository
         serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
 
         IServiceCollection serviceCollections = serviceCollection.AddDbContext<MyContext>(
-            options => options.UseNpgsql("Host=eac-webscraping.postgres.uhserver.com ;Port=5432; Database=eac_webscraping ;Username=guilhermefelixs;Password=L@ranj4")
+            options => options.UseNpgsql("Host=aec.postgres.uhserver.com; Port=5432; Database=aec; Username=guilherme11;Password=Mudar@12")
         );
     }
 }
