@@ -56,3 +56,7 @@
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Data.dll
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.Data.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/AutoMapper.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.CrossCutting.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Application/bin/Debug/net7.0/WebScrapingAEC.CrossCutting.pdb

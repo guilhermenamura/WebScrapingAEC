@@ -24,7 +24,6 @@ public class BaseRepository<T> : IRepository<T> where T : BaseEntity{
                 item.Id = Guid.NewGuid();
             }
 
-            item.RunWebScrapingAt = DateTime.UtcNow;
             _dataset.Add(item);
 
             await _context.SaveChangesAsync();

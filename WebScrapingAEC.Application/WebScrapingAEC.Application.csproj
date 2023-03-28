@@ -46,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebScrapingAEC.CrossCutting\WebScrapingAEC.CrossCutting.csproj" />
     <ProjectReference Include="..\WebScrapingAEC.Domain\WebScrapingAEC.Domain.csproj" />
     <ProjectReference Include="..\WebScrapingAEC.Service\WebScrapingAEC.Service.csproj" />
   </ItemGroup>

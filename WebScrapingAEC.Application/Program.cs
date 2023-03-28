@@ -1,20 +1,15 @@
 using WebScrapingAEC.Application.Service;
-using WebScrapingAEC.Domain.Interfaces.Scraping;
-using WebScrapingAEC.Service.Services;
+using WebScrapingAEC.CrossCutting.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Registra a implementação de IScrapingService
-builder.Services.AddTransient<IScrapingService, ScrapingService>();
-
-// Configura a injeção de dependência do objeto "_scrapingService" na classe "WordSearchService"
 builder.Services.AddTransient<IWordSearchService, WordSearchService>();
 
+ConfigureService.ConfigureDependenciesService(builder.Services);
+ConfigureRepository.ConfigureDependenciesRepository(builder.Services);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

@@ -26,6 +26,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/WebScrapingAEC.CrossCutting.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/WebScrapingAEC.CrossCutting.csproj"
+              },
               "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
                 "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj"
               },
@@ -69,6 +72,79 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/WebScrapingAEC.CrossCutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/WebScrapingAEC.CrossCutting.csproj",
+        "projectName": "WebScrapingAEC.CrossCutting",
+        "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/WebScrapingAEC.CrossCutting.csproj",
+        "packagesPath": "/home/guilherme/.nuget/packages/",
+        "outputPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.CrossCutting/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/guilherme/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj"
+              },
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj"
+              },
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

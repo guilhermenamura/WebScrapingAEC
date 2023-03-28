@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using WebScrapingAEC.Application.Service;
-using WebScrapingAEC.Application.ViewModels;
 using WebScrapingAEC.Domain.Entities.Scraping;
-using WebScrapingAEC.Domain.Interfaces.Scraping;
 
 namespace WebScrapingAEC.Application.Controllers
 {

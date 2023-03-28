@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-using WebScrapingAEC.Application.ViewModels;
 using WebScrapingAEC.Domain.Entities.Scraping;
 using WebScrapingAEC.Domain.Interfaces.Scraping;
 
@@ -16,8 +14,7 @@ namespace WebScrapingAEC.Application.Service
 
         public bool Search(WordSearchList words)
         {
-            var teste = _scrapingService.Get(words);
-            return teste;
+            return  _scrapingService.Get(words);
         }
     }
 }

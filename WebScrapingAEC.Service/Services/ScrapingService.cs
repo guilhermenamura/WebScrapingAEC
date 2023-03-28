@@ -5,13 +5,17 @@ using WebScrapingAEC.Domain.Interfaces;
 using WebScrapingAEC.Domain.Interfaces.Scraping;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using WebScrapingAEC.Data.Repository;
 
 namespace WebScrapingAEC.Service.Services;
 
 public class ScrapingService : IScrapingService
 {
+    private IRepository<PublicationSearchResultEntity> _repositoryData;
     
+    public ScrapingService(IRepository<PublicationSearchResultEntity> repository)
+    {
+        _repositoryData = repository;
+    }
     public bool Get(WordSearchList words)
     {
         bool isError = false;
@@ -22,7 +26,7 @@ public class ScrapingService : IScrapingService
         string patternDescricao = @"<p class=""duas-linhas"">(.+?)<\/p>";
         string patternPublicadoPor = @"(?<=<span><small>Publicado por ).*?(?= em \d{2}/\d{2}/\d{4})";        
         string patternData = @"(?<=<span><small>Publicado por .+ em )\d{2}\/\d{2}\/\d{4}";
-        
+
         using (IWebDriver driver = new FirefoxDriver())
         {
             while (true)
@@ -33,8 +37,7 @@ public class ScrapingService : IScrapingService
                 if (isError)
                 {
                     IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
-                    jsExecutor.ExecuteScript($"console.log('{"Erro"}');");                    
-                    Thread.Sleep(10000); 
+                    jsExecutor.ExecuteScript($"console.log('{"Erro"}');");
                     break;
                 }
                 else
@@ -47,14 +50,16 @@ public class ScrapingService : IScrapingService
                     startIndex = resultados.IndexOf(searchTerm) + searchTerm.Length;
                     resultados = resultados.Substring(startIndex);
 
-                    int lastNewLineIndex = resultados.LastIndexOf("\n", resultados.Length - 1); 
+                    int lastNewLineIndex = resultados.LastIndexOf("\n", resultados.Length - 1);
                     for (int i = 0; i < 288; i++) // remove as últimas 288 linhas
                     {
                         lastNewLineIndex = resultados.LastIndexOf("\n", lastNewLineIndex - 1);
                     }
+
                     resultados = resultados.Substring(0, lastNewLineIndex + 1);
-                    string[] substrings = resultados.Split(new string[] { "<a href=" }, StringSplitOptions.None).Skip(1).ToArray();
-                    
+                    string[] substrings = resultados.Split(new string[] { "<a href=" }, StringSplitOptions.None).Skip(1)
+                        .ToArray();
+
                     foreach (var item in substrings)
                     {
                         Match titulo = Regex.Match(item, patternTitle);
@@ -62,7 +67,7 @@ public class ScrapingService : IScrapingService
                         Match descricao = Regex.Match(item, patternDescricao);
                         Match publicadoPor = Regex.Match(item, patternPublicadoPor);
                         Match data = Regex.Match(item, patternData);
-                        
+
                         var newPublication = new PublicationSearchResultEntity()
                         {
                             Titulo = titulo.Value,
@@ -71,16 +76,16 @@ public class ScrapingService : IScrapingService
                             Descricao = descricao.Groups[1].Value,
                             DataPublicacao = data.Value
                         };
-                        virtualMatrixPublicationSearchResult = virtualMatrixPublicationSearchResult.Concat(new[] { newPublication });
+                        virtualMatrixPublicationSearchResult =
+                            virtualMatrixPublicationSearchResult.Concat(new[] { newPublication });
                     }
+                    page++;
                 }
-                page++;
             }
         }
-        
-        foreach (var item in virtualMatrixPublicationSearchResult)
+        foreach (PublicationSearchResultEntity item in virtualMatrixPublicationSearchResult)
         {
-            //InsertAsync(item);
+            _repositoryData.InsertAsync(item);
         }
 
         return isError;
