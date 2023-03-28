@@ -21,3 +21,6 @@ Npgsql para conexao com o BD PostGre
 BD Postgre
 
 Não optou-se por utilizar GitFlow pois é apenas um prototipo rapido e apenas uma pessoa esta trabalhando.
+
+![image](https://user-images.githubusercontent.com/42627524/228366755-afeb2df0-d844-4cef-8bd6-888f3f57c882.png)
+
