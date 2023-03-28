@@ -24,3 +24,6 @@ Não optou-se por utilizar GitFlow pois é apenas um prototipo rapido e apenas u
 
 ![image](https://user-images.githubusercontent.com/42627524/228366755-afeb2df0-d844-4cef-8bd6-888f3f57c882.png)
 
+
+![image](https://user-images.githubusercontent.com/42627524/228367238-e9162e48-1bc7-4e2e-a4d7-ff5910275fc2.png)
+
