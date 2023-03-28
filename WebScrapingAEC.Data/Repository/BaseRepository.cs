@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebScrapingAEC.Data.Repository;
 
-public class BaseRepository<T> : IRepository<PublicationSearchResultEntity> where T : BaseEntity
-{
+public class BaseRepository<T> : IRepository<T> where T : BaseEntity{
+    
     protected readonly MyContext _context;
     private DbSet<PublicationSearchResultEntity> _dataset;
     public BaseRepository(MyContext context)

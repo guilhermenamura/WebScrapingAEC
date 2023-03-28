@@ -9,20 +9,9 @@ using WebScrapingAEC.Data.Repository;
 
 namespace WebScrapingAEC.Service.Services;
 
-public class ScrapingService : IRepository<PublicationSearchResultEntity>, IScrapingService
+public class ScrapingService : IScrapingService
 {
-    private readonly BaseRepository<PublicationSearchResultEntity> _repository;
-
-    public ScrapingService(BaseRepository<PublicationSearchResultEntity> repository)
-    {
-        _repository = repository;
-    }
-
-    public Task<bool> InsertAsync(PublicationSearchResultEntity item)
-    {
-        return _repository.InsertAsync(item);
-    }
-
+    
     public bool Get(WordSearchList words)
     {
         bool isError = false;
@@ -91,7 +80,7 @@ public class ScrapingService : IRepository<PublicationSearchResultEntity>, IScra
         
         foreach (var item in virtualMatrixPublicationSearchResult)
         {
-            InsertAsync(item);
+            //InsertAsync(item);
         }
 
         return isError;

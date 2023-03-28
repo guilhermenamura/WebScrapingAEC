@@ -10,12 +10,6 @@ builder.Services.AddTransient<IScrapingService, ScrapingService>();
 // Configura a injeção de dependência do objeto "_scrapingService" na classe "WordSearchService"
 builder.Services.AddTransient<IWordSearchService, WordSearchService>();
 
-// Configura a injeção de dependência do objeto "_scrapingService" na classe "WordSearchService"
-builder.Services.AddTransient<WordSearchService>(provider =>
-{
-    var scrapingService = provider.GetRequiredService<IScrapingService>();
-    return new WordSearchService(scrapingService);
-});
 
 // Add services to the container.
 
