@@ -1,16 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-
 namespace WebScrapingAEC.Domain.Entities;
 
 public abstract class BaseEntity {
-    [Key]
-    public Guid Id { get; set; }
-
-    private DateTime? _createAt;
-    public DateTime? CreateAt {
-        get { return _createAt; }
-        set { _createAt = (value == null ? DateTime.UtcNow : value); }
-    }
-
-    public DateTime? UpdateAt { get; set; }
+    private readonly DateTime _runWebScrapingAt = DateTime.UtcNow;
+    public DateTime RunWebScrapingAt => _runWebScrapingAt;
 }

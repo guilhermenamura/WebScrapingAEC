@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using WebScrapingAEC.Domain.Entities;
 using WebScrapingAEC.Domain.Entities.Scraping;
 using WebScrapingAEC.Domain.Interfaces;
@@ -18,6 +19,13 @@ public class ScrapingService : IRepository, IScrapingService
     {
         bool isError = false;
         int page = 1;
+        IEnumerable<PublicationSearchResultEntity> virtualMatrixPublicationSearchResult = new List<PublicationSearchResultEntity>();
+        string patternTitle = @"(?<=<h3 class=""tres-linhas"">).*?(?=<\/h3>)";
+        string patternArea = @"<span\s+class=""hat"">([^<]*)<\/span>";
+        string patternDescricao = @"<p class=""duas-linhas"">(.+?)<\/p>";
+        string patternPublicadoPor = @"(?<=<span><small>Publicado por ).*?(?= em \d{2}/\d{2}/\d{4})";        
+        string patternData = @"(?<=<span><small>Publicado por .+ em )\d{2}\/\d{2}\/\d{4}";
+        
         using (IWebDriver driver = new FirefoxDriver())
         {
             while (true)
@@ -31,6 +39,43 @@ public class ScrapingService : IRepository, IScrapingService
                     jsExecutor.ExecuteScript($"console.log('{"Erro"}');");                    
                     Thread.Sleep(10000); 
                     break;
+                }
+                else
+                {
+                    string html = driver.PageSource;
+                    string searchTerm = "Resultados encontrados para o termo:";
+                    int startIndex = html.IndexOf(searchTerm) + searchTerm.Length;
+                    string resultados = html.Substring(startIndex);
+                    searchTerm = "<div class=\"container\">";
+                    startIndex = resultados.IndexOf(searchTerm) + searchTerm.Length;
+                    resultados = resultados.Substring(startIndex);
+
+                    int lastNewLineIndex = resultados.LastIndexOf("\n", resultados.Length - 1); 
+                    for (int i = 0; i < 288; i++) // remove as últimas 288 linhas
+                    {
+                        lastNewLineIndex = resultados.LastIndexOf("\n", lastNewLineIndex - 1);
+                    }
+                    resultados = resultados.Substring(0, lastNewLineIndex + 1);
+                    string[] substrings = resultados.Split(new string[] { "<a href=" }, StringSplitOptions.None).Skip(1).ToArray();
+                    
+                    foreach (var item in substrings)
+                    {
+                        Match titulo = Regex.Match(item, patternTitle);
+                        Match area = Regex.Match(item, patternArea);
+                        Match descricao = Regex.Match(item, patternDescricao);
+                        Match publicadoPor = Regex.Match(item, patternPublicadoPor);
+                        Match data = Regex.Match(item, patternData);
+                        
+                        var newPublication = new PublicationSearchResultEntity()
+                        {
+                            Titulo = titulo.Value,
+                            Area = area.Groups[1].Value,
+                            Autor = publicadoPor.Value,
+                            Descricao = descricao.Groups[1].Value,
+                            DataPublicacao = data.Value
+                        };
+                        virtualMatrixPublicationSearchResult = virtualMatrixPublicationSearchResult.Concat(new[] { newPublication });
+                    }
                 }
                 page++;
             }
