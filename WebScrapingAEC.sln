@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingAEC.Domain", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingAEC.Service", "WebScrapingAEC.Service\WebScrapingAEC.Service.csproj", "{267565B3-1483-400C-88CE-E8E91319FFEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingAEC.CrossCutting", "WebScrapingAEC.CrossCutting\WebScrapingAEC.CrossCutting.csproj", "{56A6077F-F298-4D9F-B7D7-48E4D1D7ACCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingAEC.Data", "WebScrapingAEC.Data\WebScrapingAEC.Data.csproj", "{2FB72B85-4DE7-44BE-8DA3-A61426C86954}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{267565B3-1483-400C-88CE-E8E91319FFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267565B3-1483-400C-88CE-E8E91319FFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267565B3-1483-400C-88CE-E8E91319FFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A6077F-F298-4D9F-B7D7-48E4D1D7ACCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A6077F-F298-4D9F-B7D7-48E4D1D7ACCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A6077F-F298-4D9F-B7D7-48E4D1D7ACCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A6077F-F298-4D9F-B7D7-48E4D1D7ACCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB72B85-4DE7-44BE-8DA3-A61426C86954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB72B85-4DE7-44BE-8DA3-A61426C86954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB72B85-4DE7-44BE-8DA3-A61426C86954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB72B85-4DE7-44BE-8DA3-A61426C86954}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

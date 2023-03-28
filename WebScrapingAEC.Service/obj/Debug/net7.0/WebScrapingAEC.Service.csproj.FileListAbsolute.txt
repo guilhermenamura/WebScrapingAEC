@@ -16,3 +16,5 @@
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
 /home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/bin/Debug/net7.0/WebScrapingAEC.Data.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/bin/Debug/net7.0/WebScrapingAEC.Data.pdb

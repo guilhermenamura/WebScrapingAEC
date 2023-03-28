@@ -1,0 +1,17 @@
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Data.deps.json
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Data.runtimeconfig.json
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Data.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Data.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Domain.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/bin/Debug/net7.0/WebScrapingAEC.Domain.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.csproj.AssemblyReference.cache
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.GeneratedMSBuildEditorConfig.editorconfig
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.AssemblyInfoInputs.cache
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.AssemblyInfo.cs
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.csproj.CoreCompileInputs.cache
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.csproj.CopyComplete
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/refint/WebScrapingAEC.Data.dll
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.pdb
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/WebScrapingAEC.Data.genruntimeconfig.cache
+/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/Debug/net7.0/ref/WebScrapingAEC.Data.dll

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebScrapingAEC.Data\WebScrapingAEC.Data.csproj" />
     <ProjectReference Include="..\WebScrapingAEC.Domain\WebScrapingAEC.Domain.csproj" />
   </ItemGroup>
 

@@ -4,6 +4,79 @@
     "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Service/WebScrapingAEC.Service.csproj": {}
   },
   "projects": {
+    "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj",
+        "projectName": "WebScrapingAEC.Data",
+        "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj",
+        "packagesPath": "/home/guilherme/.nuget/packages/",
+        "outputPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/guilherme/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -79,6 +152,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj": {
+                "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Data/WebScrapingAEC.Data.csproj"
+              },
               "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj": {
                 "projectPath": "/home/guilherme/workspace/WebScrapingAEC/WebScrapingAEC.Domain/WebScrapingAEC.Domain.csproj"
               }

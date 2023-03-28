@@ -5,14 +5,22 @@ using WebScrapingAEC.Domain.Interfaces;
 using WebScrapingAEC.Domain.Interfaces.Scraping;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using WebScrapingAEC.Data.Repository;
 
 namespace WebScrapingAEC.Service.Services;
 
-public class ScrapingService : IRepository, IScrapingService
+public class ScrapingService : IRepository<PublicationSearchResultEntity>, IScrapingService
 {
-    public Task<bool> InsertAsync(PublicationSearchResultEntity itens)
+    private readonly BaseRepository<PublicationSearchResultEntity> _repository;
+
+    public ScrapingService(BaseRepository<PublicationSearchResultEntity> repository)
     {
-        throw new NotImplementedException();
+        _repository = repository;
+    }
+
+    public Task<bool> InsertAsync(PublicationSearchResultEntity item)
+    {
+        return _repository.InsertAsync(item);
     }
 
     public bool Get(WordSearchList words)
@@ -79,6 +87,11 @@ public class ScrapingService : IRepository, IScrapingService
                 }
                 page++;
             }
+        }
+        
+        foreach (var item in virtualMatrixPublicationSearchResult)
+        {
+            InsertAsync(item);
         }
 
         return isError;
